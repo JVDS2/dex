@@ -1,7 +1,8 @@
 function capeOpen(){
     let cape = document.getElementById("cape");
-    let button = document.getElementById("open");
+    let extra = document.getElementById("extra-info");
     cape.classList.toggle("opened");
+    extra.classList.toggle("opened");
 }
 
 function getTypeColor(pokeType){
@@ -68,6 +69,22 @@ function search(){
         // document.getElementById("image").src = image;
         let bgImage = `url(${image})`;
         document.getElementById("image").style.backgroundImage=bgImage;
+
+        let hp = data["stats"]["0"]["base_stat"];
+        let atk = data["stats"]["1"]["base_stat"];
+        let def = data["stats"]["2"]["base_stat"];
+        let spatk = data["stats"]["3"]["base_stat"];
+        let spdef = data["stats"]["4"]["base_stat"];
+        let speed = data["stats"]["5"]["base_stat"];
+
+        document.getElementById("hp").innerHTML=hp
+        document.getElementById("atk").innerHTML=atk
+        document.getElementById("defense").innerHTML=def
+        document.getElementById("spatk").innerHTML=spatk
+        document.getElementById("spdef").innerHTML=spdef
+        document.getElementById("speed").innerHTML=speed
+
+
 
       })
       .catch(error => {
