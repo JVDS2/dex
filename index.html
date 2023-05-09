@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="dex">
+        <div id="cape" class="dex-cape">
+            <button id="open" onclick="capeOpen()">↑</button>
+        </div>
+        <div class="info-container">
+            <div class="image-border">
+                <div id="image" class="image-container">
+                    <!-- <img id="image" src=""> -->
+                </div>
+                <h2 id="name">Name</h2>
+            </div>
+            <div class="types-container">
+                <h3 id="first-type" class="type">first</h3>
+                <h3 id="second-type" class="type">second</h3>
+            </div>
+            <div class="input-container">
+                <input id="input" type="text">
+                <button id="search" onclick="search()">Procurar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const input = document.getElementById("input");
+        input.addEventListener("keyup", function(event){
+            if(event.key === "Enter"){
+                search()
+            }
+        })
+
+    </script>
+    
+    <script src="js/pokeapi.js"></script>
+</body>
+</html>
