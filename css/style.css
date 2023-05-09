@@ -24,7 +24,7 @@ body{
 }
 
 .dex-cape{
-    background: var(--darker-main-red);
+    background: linear-gradient(125deg, var(--darker-main-red), var(--main-red), var(--darker-main-red));
     border-radius: 10px;
     box-shadow: 0px 10px 10px #30090955;
     min-width: 360px;
@@ -55,9 +55,13 @@ body{
     height: 50px;
     border-radius: 25px;
     background: goldenrod;
-    border: outset darkgoldenrod;
+    border: solid darkgoldenrod;
     /* box-shadow: 5px 5px green; */
     cursor: pointer;
+    transition: all .3s;
+}
+#open:hover{
+    background: rgb(160, 95, 10);
 }
 
 .info-container{
@@ -90,7 +94,7 @@ body{
 .info-container .image-border #name{
     color: var(--black);
     transform: translateX(50px);
-    font-family: 'VT323', monospace;
+    font-family: 'Share Tech', sans-serif;
     font-size: 40px;
     /* position: absolute; */
     bottom: 170px;
@@ -119,14 +123,14 @@ body{
 }
 .info-container .types-container .type{
     background: var(--green);
-    color: rgb(42, 63, 42);
+    color: #000;
     padding: 0px;
     padding-left: 10px;
     padding-right: 10px;
     border: 2px inset var(--main-red);
     border-radius: 4px;
     margin: 10px;
-    font-family: 'VT323', monospace;
+    font-family: 'Share Tech', sans-serif;
     font-size: 20px;
 }
 .input-container{
