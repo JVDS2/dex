@@ -138,7 +138,9 @@ function search(){
           document.getElementById("second-type").style.display="none";
       }
 
-      let image = data["sprites"]["other"]["home"]["front_default"];
+      // let image = data["sprites"]["other"]["home"]["front_default"];
+      // let image = data["sprites"]["other"]["dream_world"]["front_default"];
+      let image = data["sprites"]["other"]["official-artwork"]["front_default"];
       // document.getElementById("image").src = image;
       let bgImage = `url(${image})`;
       document.getElementById("image").style.backgroundImage=bgImage;
